@@ -23,7 +23,6 @@ const TopPlay = () => {
   const dispatch = useDispatch();
   const { activeSong, isPlaying } = useSelector((state) => state.player);
   const { data } = useGetTopChartsQuery();
-  console.log(data?.tracks);
 
   const divRef = useRef(null);
   useEffect(() => {
@@ -31,6 +30,7 @@ const TopPlay = () => {
   });
 
   const topPlays = data?.tracks.slice(0, 5);
+  console.log(topPlays);
 
   const handlePauseClick = () => {
     dispatch(playPause(false));
