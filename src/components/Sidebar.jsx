@@ -1,10 +1,23 @@
 import { RiCloseLine } from "react-icons/ri";
 import { logo } from "../assets";
 //Needs to change the logo
-import { links } from "../assets/constants";
+// import { links } from "../assets/constants";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { HiOutlineMenu } from "react-icons/hi";
+import {
+  HiOutlineHashtag,
+  HiOutlineHome,
+  HiOutlineMenu,
+  HiOutlinePhotograph,
+  HiOutlineUserGroup,
+} from "react-icons/hi";
+
+const links = [
+  { name: "Discover", path: "/", icon: HiOutlineHome },
+  { name: "Around You", path: "/around-you", icon: HiOutlinePhotograph },
+  { name: "Top Artists", path: "/top-artists", icon: HiOutlineUserGroup },
+  { name: "Top Charts", path: "/top-charts", icon: HiOutlineHashtag },
+];
 
 const NavLinks = ({ handleClick }) => (
   <div className="mt-10">
