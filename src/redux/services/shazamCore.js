@@ -61,6 +61,7 @@ export const shazamCoreApi = createApi({
   }),
   endpoints: (builder) => ({
     getTopCharts: builder.query({ query: () => "/charts/track" }),
+
     getSongDetails: builder.query({
       query: ({ songid }) => `/tracks/details?track_id=${songid}`,
     }),
@@ -73,9 +74,11 @@ export const shazamCoreApi = createApi({
       query: (artistId) => `/artists/details?artist_id=${artistId}`,
     }),
 
-    // getSongsByGenre: builder.query({ query: (genre) => `v1/charts/genre-world?genre_code=${genre}` }),
+    getSongsByCountry: builder.query({
+      query: (countryCode) => `/charts/country/country_code=${countryCode}`,
+    }),
 
-    // getSongsByCountry: builder.query({ query: (countryCode) => `v1/charts/country?country_code=${countryCode}` }),
+    // getSongsByGenre: builder.query({ query: (genre) => `v1/charts/genre-world?genre_code=${genre}` }),
 
     // getSongsBySearch: builder.query({ query: (searchTerm) => `v1/search/multi?search_type=SONGS_ARTISTS&query=${searchTerm}` }),
 
@@ -121,4 +124,23 @@ export const {
   useGetSongDetailsQuery,
   useGetSongRelatedQuery,
   useGetArtistDetailsQuery,
+  useGetSongsByCountryQuery,
 } = shazamCoreApi;
+
+// const options = {
+//   method: "GET",
+//   url: "https://shazam.p.rapidapi.com/charts/list/countries?id=IN",
+//   // query: (countryCode) => `/charts/list/countries?name=${countryCode}`,
+//   headers: {
+//     "X-RapidAPI-Key": "3884d3808fmsheb555fa9cda0c6fp1805aajsna701b39d8757",
+
+//     "X-RapidAPI-Host": "shazam.p.rapidapi.com",
+//   },
+// };
+
+// try {
+//   const response = await axios.request(options);
+//   console.log(response.data);
+// } catch (error) {
+//   console.error(error);
+// }
