@@ -1,5 +1,7 @@
 import { RiCloseLine } from "react-icons/ri";
-import { logo } from "../assets";
+// import { logo } from "../assets";
+import logo from "../assets/music.png";
+// import { music } from "../assets";
 //Needs to change the logo
 // import { links } from "../assets/constants";
 import { useState } from "react";
@@ -40,7 +42,7 @@ const Sidebar = () => {
   return (
     <>
       <div className="md:flex hidden flex-col w-[240px] py-10 px-4 bg-[#122c0e]">
-        <img src={logo} alt="logo" className="w-full h-14 object-contain" />
+        <img src={logo} alt="logo" className="w-full h-34 object-contain" />
         <NavLinks />
       </div>
       <div className="absolute md:hidden block  top-6 right-3 ">

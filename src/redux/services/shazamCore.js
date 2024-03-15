@@ -151,3 +151,20 @@ export const {
 // } catch (error) {
 //   console.error(error);
 // }
+
+// const options = {
+//   method: "GET",
+//   url: "https://spotify81.p.rapidapi.com/top_200_tracks",
+//   // params: { country: "IN" },
+//   headers: {
+//     "X-RapidAPI-Key": "3884d3808fmsheb555fa9cda0c6fp1805aajsna701b39d8757",
+//     "X-RapidAPI-Host": "spotify81.p.rapidapi.com",
+//   },
+// };
+
+// try {
+//   const response = await axios.request(options);
+//   console.log(response.data);
+// } catch (error) {
+//   console.error(error);
+// }
